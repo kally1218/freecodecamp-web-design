@@ -1,25 +1,25 @@
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
-  font-family: sans-serif;
-  padding: 20px;
-}
+  font-family: sans-serif; /*设置body里的字体-*/
+  padding: 20px; /*设置body里的内边距--*/>
+} 
 
 h1 {
-  font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
+  font-size: 40px; /*设置h1的字体大小*/
+  margin-top: 0; /*设置h1的上边距*/
+  margin-bottom: 15px;   /*设置h1的下边距*/
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 30px; /*设置h2的字体大小*/
 }
 
 .established {
-  font-style: italic;
+  font-style: italic; <设置字体为斜体>
 }
 
 h1, h2, p {
-  text-align: center;
+  text-align: center;  /*设置h1,h2,p的文本对齐方式为居中*/
 }
 
 .menu {
@@ -27,21 +27,21 @@ h1, h2, p {
   background-color: burlywood;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
-  max-width: 500px;
+  padding: 20px; /*设置菜单的内边距*/
+  max-width: 500px; /*设置菜单的最大宽度*/
 }
 
 img {
-  display: block;
+  display: block; /*设置图片为块级元素*/
   margin-left: auto;
-  margin-right: auto;
-  margin-top:-25px;
+  margin-right: auto; /*设置图片的左右外边距为自动*/
+  margin-top:-25px; 
 }
 
 hr {
   height: 2px;
   background-color: brown;
-  border-color: brown;
+  border-color: brown; /*设置hr的高度和背景颜色*/
 }
 
 .bottom-line {
@@ -53,7 +53,7 @@ h1, h2 {
 }
 
 .item p {
-  display: inline-block;
+  display: inline-block; /*设置p为行内块元素*/
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 18px;
@@ -65,7 +65,7 @@ h1, h2 {
 }
 
 .price {
-  text-align: right;
+  text-align: right; /*设置价格的文本对齐方式为右对齐*/
   width: 25%;
 }
 
@@ -84,7 +84,7 @@ a {
 }
 
 a:visited {
-  color: black;
+  color: black; 
 }
 
 a:hover {
