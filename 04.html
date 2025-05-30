@@ -1,14 +1,22 @@
-<!--现在，将某些浏览器添加的正文默认边距设置为 0，从而消除水平滚动条。-->
-<!--你想让用户填写的表单数据通过 POST 的方式发出-->
-<!--form method="post" action="你要发到的网址"-->
-<!--checked 是干什么的？
-    在 HTML 中，如果你有多个单选框（type="radio"），只有被选中的那个会随着表单一起提交。
-    所以你必须指定哪一个是默认选中的，那就用 checked。-->
-<!--设置 value 是为了告诉服务器：你选了哪一个选项，它应该接收什么值。
-    第一个提示项设为 value=""（不算有效选择），后面的设为 1 到 4，这样数据才是结构化、可-->
-<!--行内元素（inline element）：不会换行，可以和其他元素排在同一行里。
-    块级元素（block element）：会独占一行，它后面的内容会自动换到下一行。-->
-
+<!--gpt总结我遗忘的内容
+- css中
+    - 有点（.）：表示类选择器（class selector）
+    - 没点：表示标签名选择器或其他选择器
+    - ID选择器（以 # 开头）
+现在，将某些浏览器添加的正文默认边距设置为 0，从而消除水平滚动条。
+- method的属性有两种,安全的藏起来数据的方法:POST
+    -你想让用户填写的表单数据通过 POST 的方式发出,就这么写:
+        <form method="post" action="你要发到的网址">
+- checked 是干什么的？
+    -在 HTML 中，如果你有多个单选框（type="radio"），只有被选中的那个会随着表单一起提交。所以你必须指定哪一个是默认选中的，那就用 checked。
+-设置 value 是为了告诉服务器：你选了哪一个选项，它应该接收什么值。
+    -第一个提示项设为 value=""（不算有效选择），后面的设为 1 到 4，这样数据才是结构化、可读的
+-行内元素（inline element）：不会换行，可以和其他元素排在同一行里。
+-块级元素（block element）：会独占一行，它后面的内容会自动换到下一行。
+-rem 的意思是 “root em”，rem 是相对于 <html> 标签的字体大小的单位，1rem = <html> 的字体大小。它让整个页面的比例更容易控制，也更统一。
+-关于label:为什么要加 for="first-name"？
+    -这是为了让这个 <label> 和对应的输入框 <input> 联系起来,这样可以提升可访问性（比如屏幕阅读器能正确识别），并且点击标签时也能自动聚焦到输入框上。    
+-->
     <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,13 +29,18 @@
     <p>Please fill out this form with the required information</p>
     <form method="post" action='https://register-demo.freecodecamp.org'>
       <fieldset>
+        <!--关于label:为什么要加 for="first-name"？
+        -这是为了让这个 <label> 和对应的输入框 <input> 联系起来,这样可以提升可访问性（比如屏幕阅读器能正确识别），并且点击标签时也能自动聚焦到输入框上。-->
         <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
         <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
         <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
         <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
       </fieldset>
       <fieldset>
+        <!--<legend> 是给一组表单输入项加个标题的-->
         <legend>Account type (required)</legend>
+        <!--把表单元素（如 <input>、<textarea>、<select>）和它们对应的 <label> 关联起来。每个输入元素要加一个唯一的 id，并且 <label> 的 for 属性要等于这个 id。-->
+        <!--它最常用的目的就是让本来是块级元素的标签变成行内显示，适合排成一行的布局（比如一行内多个按钮、标签、radio 输入框等）。-->
         <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
         <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
       </fieldset>
