@@ -12,9 +12,24 @@ body {
     margin: 1em auto;
     text-align: center;
   }
-  
+    /* margin: 0 auto;
+        作用：让表单在水平方向居中。
+        0 是上下的外边距，auto 是左右的外边距自动分配，因此左右距离相等，从而居中。
+      
+        2. max-width: 500px;
+        作用：表单最大宽度不能超过 500 像素。
+        
+        如果浏览器窗口很宽，表单仍会限制在 500px 内。
+        
+        3. min-width: 300px;
+        作用：表单最小宽度不能小于 300 像素。
+        如果浏览器窗口很窄（比如手机屏幕），表单也不会小于 300px，保持可读性。-->
+  */
+      
+
+
   form {
-    width: 60vw;
+    width: 60vw; /* 这个元素最小宽度必须是浏览器窗口宽度的60% vw=viewport width */
     max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
@@ -36,6 +51,7 @@ body {
     margin: 0.5rem 0;
   }
   
+  /* margin-bottom: 0;这是把底部外边距重新设置为 0，会覆盖上面     margin: 10px 0 里的 margin-bottom: 10px。 */
   input,
   textarea,
   select {
@@ -43,6 +59,7 @@ body {
     width: 100%;
     min-height: 2em;
   }
+
   
   input, textarea {
     background-color: #0a0a23;
@@ -52,7 +69,7 @@ body {
   
   .inline {
     width: unset;
-    margin: 0 0.5em 0 0;
+    margin: 0 0.5em 0 0; /* 设置顺序是顺时针的上右下左 */
     vertical-align: middle;
   }
   

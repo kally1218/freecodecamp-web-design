@@ -17,7 +17,7 @@
 -关于label:为什么要加 for="first-name"？
     -这是为了让这个 <label> 和对应的输入框 <input> 联系起来,这样可以提升可访问性（比如屏幕阅读器能正确识别），并且点击标签时也能自动聚焦到输入框上。    
 -->
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -41,6 +41,12 @@
         <legend>Account type (required)</legend>
         <!--把表单元素（如 <input>、<textarea>、<select>）和它们对应的 <label> 关联起来。每个输入元素要加一个唯一的 id，并且 <label> 的 for 属性要等于这个 id。-->
         <!--它最常用的目的就是让本来是块级元素的标签变成行内显示，适合排成一行的布局（比如一行内多个按钮、标签、radio 输入框等）。-->
+        
+        <!--为什么name写同样的就只能单选??
+          -两个按钮的 name="account type" 是一样的，这就告诉浏览器：
+          -“嘿，这两个按钮是同一个问题的两个选项，用户只能选一个。”
+          -所以只要你选了一个，另一个就会自动取消。
+              否则要用checkbox-->
         <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
         <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
       </fieldset>
@@ -63,6 +69,9 @@
       <label for="terms-and-conditions">
         <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
       </label>
+      <!--这里的 value="Submit" 中的 "Submit" 是按钮上显示的文字，也就是用户看到的按钮标签。-->
+      <!--为什么有反斜杠在最后?? 是XHTML的写法
+        -因为 <input> 是一个 自闭合标签（void element），它本来就不能有内容，也不需要闭合标签-->
       <input type="submit" value="Submit" />
     </form>
   </body>
