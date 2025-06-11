@@ -31,9 +31,9 @@ body {
   form {
     width: 60vw; /* 这个元素最小宽度必须是浏览器窗口宽度的60% vw=viewport width */
     max-width: 500px;
-    min-width: 300px; <!-- 这个元素最小宽度必须是300px -->
-    margin: 0 auto; <!-- 让表单在水平方向居中 -->
-    padding-bottom: 2em; <!-- 让表单底部有2em的内边距 -->
+    min-width: 300px; /* 这个元素最小宽度必须是300px */
+    margin: 0 auto; /* 让表单在水平方向居中 */
+    padding-bottom: 2em; /* 让表单底部有2em的内边距 */
   }
   
   fieldset {
