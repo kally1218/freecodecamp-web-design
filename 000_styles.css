@@ -1,0 +1,100 @@
+body {
+    font-family:'Poppins', sans-serif;
+    font-size:1rem;
+    color: #f3f3f3;
+    margin: 0;
+    background-color: #1b1b31;
+    background-image: url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg');  /* 背景图路径 */
+    background-size: cover;                   /* 铺满整个页面 */
+    background-repeat: no-repeat;             /* 不重复 */
+    background-position: center center;       /* 居中对齐 */
+    padding-top: 2rem;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(102, 102, 228, 0.4); /* 蓝色 + 透明度 0.4 */
+    z-index: 0;
+    background-size:cover;
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem;
+    
+  }
+  
+  input[type="text"] {
+    display:block;
+  }
+  
+  input[type="email"] {
+    display:block;
+  
+  }
+  
+  h1,p {
+    margin: 0.2em auto;
+    text-align:center;
+    position:relative;
+    z-index:1;
+  }
+  
+  p {
+    margin:0.2em auto;
+    padding-bottom:2rem;
+  }
+  
+  form {
+    width: 60vw; /* 这个元素最小宽度必须是浏览器窗口宽度的60% vw=viewport width */
+    max-width: 500px;
+    min-width: 300px; /* 这个元素最小宽度必须是300px */
+    margin: 0 auto; /* 让表单在水平方向居中 */
+    padding-bottom: 2em; /* 让表单底部有2em的内边距 */
+    background: rgba(27, 27, 50 ,0.8);
+    border-radius:0.25rem;
+    position: relative;
+    z-index: 1;
+    padding:2.5rem;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 80%;
+    min-height: 2em;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0; /* 设置顺序是顺时针的上右下左 */
+    vertical-align: middle;
+  }
+  
+  .form-group {
+    display: block;
+    text-align: left;
+    margin: 1rem auto auto auto;
+    padding: 0.25rem;
+  }
+  
+  input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #37d151;
+  border-color: #37d151;
+  min-width: 300px;
+  color: white;
+  }
