@@ -1,0 +1,188 @@
+/*不要无脑对所有用户启用平滑滚动，因为有些用户为了防止头晕或不适，会在系统里设置「减少动态效果」(Reduced Motion)*/
+@media (prefers-reduced-motion: no-preference){
+  * {
+  scroll-behavior: smooth; /*平滑滚动*/
+  }
+}
+
+body {
+  background: #f5f6f7;
+  color: #1b1b32;
+  font-family: Helvetica; /* 使用 Helvetica 字体 */
+  margin: 0; /* 去除默认边距 */
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #1b1b32;
+  display: flex; /* 使用 Flexbox 布局 */
+  /*Flexbox 是 CSS 布局方式之一，最常用来：
+    横向或纵向排列元素
+    控制元素之间的间距
+    实现居中对齐
+    非常适合写 header、nav、按钮组。*/
+  justify-content: space-between; /* 水平分布 */
+  align-items: center; /* 垂直居中 */
+  top: 0; /* 固定在顶部 */
+}
+
+#logo {
+  width: max(10rem, 18vw); /* logo 的宽度至少为 10rem 或 18% 的视口宽度 */
+  background-color: #0a0a23;
+  aspect-ratio: 35 / 4; /* 保持宽高比为 35:4 */
+  padding: 0.4rem; /* 内边距 */
+}
+
+h1 {
+  color: #f1be32;
+  font-size: min(5vw, 1.2em);
+  text-align: center;
+}
+
+nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
+}
+
+nav > ul {
+  display: flex;    /* 使用 Flexbox 布局 */
+  justify-content: space-evenly; /* 平均分布 */
+  flex-wrap: wrap; /* 换行 */
+  align-items: center; /* 垂直居中 */
+  padding-inline-start: 0; /* 去除默认的内边距 */
+  margin-block: 0; /* 去除默认的外边距 */
+  height: 100%;
+}
+
+nav > ul > li { /* 列表项样式 */
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+nav > ul > li:hover { /* 鼠标悬停时的样式 */
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+
+li > a { /* 链接样式 */
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 50px; /* 留出 header 的高度 */
+}
+
+section {
+  width: 80%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
+}
+
+h1,
+h2 {
+  font-family: Verdana, Tahoma;
+}
+
+h2 {
+  border-bottom: 4px solid #dfdfe2;    /* 底部边框 */
+  margin-top: 0px;
+  padding-top: 60px;
+}
+
+.info {
+  padding: 10px 0 0 5px; /* 上边距 10px，左边距 5px */
+}
+
+.formrow {
+  margin-top: 30px;
+  padding: 0px 15px;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.info label, .info input {
+  display: inline-block;
+}
+
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+  text-align: right;
+}
+
+.question-block {
+  text-align: left; /* 左对齐 */
+  display: block; /* 块级元素 */
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+h3 {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 1.375rem;
+}
+
+h3::before { /* 在标题前添加序号 */
+  content: "Question #"; /* 添加前缀 */
+}
+
+.question {
+  border: none;
+  padding-bottom: 0;
+}
+
+.answers-list {
+  list-style: none; /* 去除列表样式 */
+  padding: 0;
+}
+
+button {
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 1.438rem;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+
+footer {
+  background-color: #2a2a40;
+  display: flex;
+  justify-content: center;
+}
+
+footer,
+footer a {
+  color: #dfdfe2;
+}
+
+address {
+  text-align: center;
+  padding: 0.3em;
+}
+
+.sr-only {
+  position: absolute; /* 绝对定位 */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); /* 隐藏元素 */
+  clip-path: inset(50%); /* 兼容性更好 */
+  white-space: nowrap; /* 防止文本换行 */
+}
