@@ -1,8 +1,8 @@
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif; /*设置body里的字体-*/
-  padding: 20px; /*设置body里的内边距--*/>
-} 
+  padding: 20px; /*设置body里的内边距--*/
+}
 
 h1 {
   font-size: 40px; /*设置h1的字体大小*/
@@ -15,7 +15,7 @@ h2 {
 }
 
 .established {
-  font-style: italic; <设置字体为斜体>
+  font-style: italic; /*设置字体为斜体*/
 }
 
 h1, h2, p {
