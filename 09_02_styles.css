@@ -1,0 +1,39 @@
+main {
+  display:block;
+  background-color:#EEEEEE;
+}
+
+body {
+  text-align:center;
+}
+
+ul {
+  max-width: 550px;
+  text-align:left;
+}
+
+img {
+  display:block;
+  max-width:100%;
+  
+
+}
+
+li {
+  margin:15px 0 ;
+}
+cite {
+  text-align:left;
+}
+#img-div {
+  background:white;
+}
+
+blockquote {
+  text-align:left;
+}
+/* ul {
+  max-width: 550px;
+  text-align: left;
+  line-height: 1.6;
+} */
