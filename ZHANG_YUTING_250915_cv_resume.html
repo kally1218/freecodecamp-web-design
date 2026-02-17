@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Yuting Zhang Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-size: 11pt;
+        }
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            display: flex;
+            flex-wrap: wrap; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        /* 新增的样式：用于包含标题和照片的顶部区域 */
+        .header-section {
+            width: 100%; /* 占据容器全部宽度 */
+            padding: 30px 25px 0 25px; /* 上内边距30px，左右25px，下0px */
+            box-sizing: border-box;
+            display: flex; /* 使用Flexbox布局 */
+            align-items: flex-start; /* 顶部对齐 */
+            justify-content: space-between; /* 标题和照片两端对齐 */
+        }
+        .name-and-line {
+            display: flex;
+            flex-direction: column; /* 名字和线垂直排列 */
+            flex-grow: 1; /* 占据剩余空间 */
+            margin-right: 20px; /* 和照片留点间距 */
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin: 0; /* 移除默认外边距 */
+            padding: 0;
+            text-align: left; 
+            line-height: 1; /* 调整行高，让名字更紧凑 */
+        }
+        .title-line {
+            border: none;
+            border-bottom: 5px solid #455f7a; /* 细灰色线 */
+            margin-top:35px; /* 标题和线之间的距离 */
+            margin-bottom: 0; /* 移除默认外边距 */
+            width: 100%; /* 线条宽度 */
+        }
+
+        .left-column {
+            width: 33%;
+            padding: 30px 25px;
+            box-sizing: border-box; 
+        }
+        .right-column {
+            width: 67%;
+            padding: 30px 25px;
+            box-sizing: border-box; 
+        }
+        h2 {
+            font-size: 16px;
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .left-column h2 {
+            border-bottom: 2px solid #bbb;
+        }
+        p, li {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .left-column ul li {
+            margin-bottom: 8px;
+        }
+        .contact-info p {
+            margin: px 0;
+        }
+        .education-item, .job-item {
+            margin-bottom: 20px;
+        }
+        .education-item h3, .job-item h3 {
+            font-size: 12pt;
+            margin: 0;
+        }
+        .job-item .company-info {
+            font-size: 11pt;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .job-item ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .job-item ul li {
+            margin-bottom: 10px;
+        }
+        /* 调整照片容器的样式，不再需要text-align: right */
+        .photo-container {
+            flex-shrink: 0; /* 防止照片缩小 */
+            margin-top: -10px; /* 微调，让照片略微上移 */
+        }
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f2f2f2;
+        }
+        .lang-label {
+            font-size: 10pt;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <div class="name-and-line">
+                <h1>YUTING<br>ZHANG</h1>
+                <hr class="title-line">
+            </div>
+            <div class="photo-container">
+                <img src="02_Profile_ZHANG_YUTING-2.JPG" alt="Profile Photo" class="profile-photo">
+            </div>
+        </div>
+        
+        <div class="left-column">
+            <section class="contact-info">
+                <h2>Contact</h2>
+                <p>Higashiosaka, Japan/Osaka 5798027</p>
+                <p>+817076231170</p>
+                <p>kallysuzuki@gmail.com</p>
+            </section>
+            
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Python programming - 6 months</li>
+                    <li>HTML coding - 3 months</li>
+                    <li>Deep learning techniques</li>
+                    <li>Knowledge in neural networks</li>
+                    <li>PyTorch framework - basics</li>
+                    <li>Language skills - JLPT N1; TOEIC - 850</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Nara Institute of Science and Technology</h3>
+                    <p><strong>Discipline </strong> Information Science<br><strong>Expected Graduation:</strong> Mar 2027</p>
+                </div>
+                <div class="education-item">
+                    <h3>Shanghai Lixin University of Accounting and Finance</h3>
+                    <p><strong>Certification </strong> Bachelor of Business Administration<br><strong>Discipline</strong> Insurance<br><strong>Major </strong>Labor and social security<br><strong>Graduation Date </strong>June 2016</p>
+                </div>
+                <div class="education-item">
+                    <h3>Shanghai No.4 High School</h3>
+                    <p><strong>Certification</strong> Higher Education<br>2012</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section>
+                <h2>Experience</h2>
+                <div class="job-item">
+                    <h3>One day Internship</h3>
+                    <p class="company-info">MUS情報システム（株）【MUFGグループ】 | Jul 2025
+                    </p>
+                    <ul>
+                        <li>
+                            Gain experiments about system development process, including planning, designing, coding, testing, and maintenance.
+                        </li>
+                    </ul>
+                    <h3>Ond day internship</h3>
+                    <p class="company-info">GENERO | Aug 2025
+                    </p>
+                    <ul>
+                        <li>
+                            Learned about the AI agent and made a basic system about Recruitment.
+                        </li>
+                    </ul>
+                    <h3>Marketing Specialist</h3>
+                    <p class="company-info">Vincotech | Shanghai | Jul 2019 - Apr 2024</p>
+                    <ul>
+                        <li>Supported <strong>end-to-end exhibition booth setup</strong> by liaising with vendors, managing logistics, and ensuring on-time delivery of materials for events with 400+ attendees.</li>
+                        <li>Digitalized employee feedback surveys or by transitioning from paper-based to online forms, achieving a <strong>60% faster response collection</strong> and increasing participation rate by <strong>25%</strong>. Digitized and tracked <strong>10+ visa applications per year</strong> using self-developed templates, reducing administrative delays by <strong>20%</strong>.</li>
+                        <li>Collaborated with cross-functional teams (sales, marketing, IT, admin, accounting, R&D) to support event activities, contributing to a <strong>15% increase in visitor engagement</strong>.</li>
+                        <li>Leveraged productivity software (e.g., Excel template) to optimise payment processing of <strong>£5,0000+</strong> monthly expenses, ensuring <strong>100% accuracy and timely reporting</strong>.</li>
+                        <li>Applied <strong>data-driven planning</strong> to organise <strong>quarterly</strong> team-meetings and team-building events (<strong>20+ participants</strong>), improving employee's engagement.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Languages</h2>
+                <p>English: Advanced - TOEIC : 850</p>
+                <p>Japanese: Advanced - JLPT : N1</p>
+                <p>Chinese (Mandarin): Native </p>
+            </section>
+
+            <section>
+                <h2>Hobbies and interests</h2>
+                <p>Traveling &bull; Sports &bull; Music &bull; Photography</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
